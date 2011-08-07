@@ -32,7 +32,9 @@ class Instascraper
       page.parser.css('.tableViewCell').each do |bookmark|
         bookmark.css('.tableViewCellTitleLink').first['href']
         
-        bookmarks << Bookmark.new(bookmark.css('.tableViewCellTitleLink').first['href'], bookmark.css('.tableViewCellTitleLink').first.text)  
+        bookmarks << Bookmark.new(bookmark.css('.tableViewCellTitleLink').first['href'], 
+                                  bookmark.css('.tableViewCellTitleLink').first.text,
+                                  'http://www.instapaper.com'+bookmark.css('.textButton').first['href'])  
       end
 
       if page.link_with :text => /Older items/
