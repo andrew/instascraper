@@ -24,7 +24,7 @@ class Instascraper
     
     bookmarks = []
     more_pages = true
-    current_page = nil
+    current_page = 1
     
     while more_pages do
       page = @agent.get("http://www.instapaper.com#{path}/#{current_page}")
@@ -36,7 +36,7 @@ class Instascraper
       end
 
       if page.link_with :text => /Older items/
-        current_page = (current_page ? current_page + 1 : 1 )
+        current_page += 1
       else
         more_pages = false
       end
