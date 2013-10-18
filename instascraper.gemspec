@@ -10,6 +10,7 @@ Gem::Specification.new do |s|
   s.homepage    = "http://github.com/andrew/instascraper"
   s.summary     = "Basic, free bookmarks api for instapaper"
   s.description = "A scraper for instapaper to provide a basic api without hacing to pay per month"
+  s.license       = 'MIT'
 
   s.rubyforge_project = "instascraper"
 
