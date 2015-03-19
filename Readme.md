@@ -1,4 +1,4 @@
-# Instascraper
+# [Instascraper](http://libraries.io/rubygems/instascraper)
 
 This library provides a basic api to instapaper bookmarks for free by scraping the page
 
